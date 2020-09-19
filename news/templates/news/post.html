@@ -1,0 +1,6 @@
+{% extends "django_test/wrapper.html" %}
+{% block content %}
+    <h2 class="text-info">{{ articles.title }}</h2>
+    <H6 class="text-info">Опубликовано: {{ articles.date_created|date:"Y-m-d в H:i:s" }}</H6>
+    <p>{{ articles.post | safe | linebreaks }}</p>
+{% endblock %}
